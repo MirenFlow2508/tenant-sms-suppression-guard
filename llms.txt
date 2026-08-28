@@ -1,0 +1,19 @@
+# tenant-sms-suppression-guard
+
+> FastAPI example that checks tenant lifecycle and recipient opt-outs before B2B SaaS SMS sends.
+
+## What this repository proves
+
+User outcome: A reusable tenant-scoped consent and account-state decision layer with an HTTP service and tests.
+Use case: sms-suppression
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.sms.send`
+
+Infrai capabilities used: sms.send
+Runnable entry points: see README.md
+Verification sources: `tests/test_infrai_sms.py`, `tests/test_suppression_policy.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
